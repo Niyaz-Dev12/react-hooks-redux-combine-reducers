@@ -1,12 +1,12 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { v4 as uuid } from "uuid";
-import { addBook } from "./booksSlice";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { v4 as uuid } from 'uuid';
+import { addBook } from './booksSlice';
 
 function BookInput() {
   const [formData, setFormData] = useState({
-    title: "",
-    authorName: "",
+    title: '',
+    authorName: '',
   });
 
   const dispatch = useDispatch();
@@ -25,8 +25,8 @@ function BookInput() {
 
     dispatch(addBook(book));
     setFormData({
-      title: "",
-      authorName: "",
+      title: '',
+      authorName: '',
     });
   }
 

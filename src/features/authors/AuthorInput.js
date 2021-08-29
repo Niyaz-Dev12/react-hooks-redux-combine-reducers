@@ -1,10 +1,10 @@
-import React, { useState } from "react";
-import { v4 as uuid } from "uuid";
-import { useDispatch } from "react-redux";
-import { addAuthor } from "./booksSlice";
+import React, { useState } from 'react';
+import { v4 as uuid } from 'uuid';
+import { useDispatch } from 'react-redux';
+import { addAuthor } from './authorSlice';
 
 function AuthorInput() {
-  const [authorName, setAuthorName] = useState("");
+  const [authorName, setAuthorName] = useState('');
   const dispatch = useDispatch();
 
   function handleAuthorChange(event) {
@@ -15,7 +15,7 @@ function AuthorInput() {
     event.preventDefault();
     const author = { authorName, id: uuid() };
     dispatch(addAuthor(author));
-    setAuthorName("");
+    setAuthorName('');
   }
 
   return (
